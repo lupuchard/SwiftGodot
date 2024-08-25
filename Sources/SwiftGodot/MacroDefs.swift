@@ -240,4 +240,17 @@ public macro SceneTree(path: String? = nil) = #externalMacro(module: "SwiftGodot
 @freestanding(declaration, names: arbitrary)
 public macro signal(_ signalName: String, arguments: Dictionary<String, Any.Type> = [:]) = #externalMacro(module: "SwiftGodotMacroLibrary", type: "SignalMacro")
 
+/// A macro that generates a .gd file for the enum it is attached to.
+///
+/// Usage:
+/// ```swift
+/// enum MyEnum {
+///     case case1, case2
+/// }
+/// ```
+///
+/// - Note: If there is a raw value, it must be an integer.
+@attached(member, names: arbitrary)
+public macro GdScriptEnum() = #externalMacro(module: "SwiftGodotMacroLibrary", type: "EnumMacro")
+
 #endif

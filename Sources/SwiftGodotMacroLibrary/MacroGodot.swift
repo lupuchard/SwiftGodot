@@ -620,7 +620,8 @@ struct godotMacrosPlugin: CompilerPlugin {
         PickerNameProviderMacro.self,
         SceneTreeMacro.self,
         Texture2DLiteralMacro.self,
-        SignalMacro.self
+        SignalMacro.self,
+		EnumMacro.self
     ]
 }
 

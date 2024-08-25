@@ -42,6 +42,7 @@ enum GodotMacroError: Error, DiagnosticMessage {
     case requiresFunction
     case requiresGArrayCollection
     case requiresNonOptionalGArrayCollection
+	case requiresEnum
     case noVariablesFound
     case noTypeFound(VariableDeclSyntax)
     case unsupportedType(VariableDeclSyntax)
@@ -80,6 +81,8 @@ enum GodotMacroError: Error, DiagnosticMessage {
             "@Callable does not support asynchronous or throwing functions"
         case .noSupportForOptionalEnums:
             "@Export(.enum) does not support optional values for the enumeration"
+		case .requiresEnum:
+			"@GdScriptEnum attribute can only be applied to an enum"
 		}
     }
     
