@@ -63,8 +63,8 @@ public struct EnumMacro: MemberMacro {
 		"""
 
 		do {
-			try FileManager.default.createDirectory(atPath: ".enum", withIntermediateDirectories: true, attributes: nil)
-			try file.write(to: URL(fileURLWithPath: ".enum/\(name).gd"), atomically: false, encoding: .utf8)
+			try FileManager.default.createDirectory(atPath: "Enums", withIntermediateDirectories: true, attributes: nil)
+			try file.write(to: URL(fileURLWithPath: "Enums/\(name).gd"), atomically: false, encoding: .utf8)
 		} catch {
 			print("Error writing file: \(error)")
 		}
